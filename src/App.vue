@@ -110,7 +110,7 @@ const themeIcon = computed(() => {
                 </NLayoutHeader>
 
                 <NLayout class="content-box" has-sider position="absolute"
-                    style="top: 64px; left: 0; right: 0; bottom: 64px;">
+                    style="top: 64px; left: 0; right: 0; bottom: 0;">
                     <NLayoutSider class="sider-bar" bordered show-trigger="arrow-circle" position="static"
                         collapse-mode="width" :collapsed-width="64" v-model:collapsed="collapse"
                         v-if="!appStore.isMobile">
@@ -125,10 +125,6 @@ const themeIcon = computed(() => {
                         </RouterView>
                     </NLayoutContent>
                 </NLayout>
-
-                <NLayoutFooter class="footer" position="absolute" style="bottom: 0;" bordered>
-                    <div class="footer-flex">Copyright © 2025 sTheNight</div>
-                </NLayoutFooter>
             </NLayout>
         </div>
     </NConfigProvider>
