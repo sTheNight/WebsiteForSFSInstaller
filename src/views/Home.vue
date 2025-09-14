@@ -14,7 +14,7 @@ const router = useRouter();
         <div class="home-grid">
             <NGrid cols="1 500:2" x-gap="12" y-gap="12">
                 <NGridItem>
-                    <NCard hoverable title="SFS 汉化包">
+                    <NCard hoverable title="SFS 汉化包" class="home-link-card">
                         <template #action>
                             <NButton>飞过去看看</NButton>
                         </template>
@@ -22,7 +22,7 @@ const router = useRouter();
                     </NCard>
                 </NGridItem>
                 <NGridItem>
-                    <NCard hoverable title="SFS 安装器">
+                    <NCard hoverable title="SFS 安装器" class="home-link-card">
                         基于「原神」开发的闭源 SFS 安装器，应该可以安装汉化包和破解补丁，如果不行的话我也没办法，毕竟我说的是「应该」
                         <template #action>
                             <NButton @click="router.push('/installer')">飞过去看看</NButton>
@@ -59,6 +59,9 @@ const router = useRouter();
 
 .home-grid {
     margin-top: 48px;
-    width: min(calc(100% - 24px), 600px);
+    width: min(calc(100% - 24px), 700px);
+}
+.home-link-card {
+    height: 100%;
 }
 </style>
