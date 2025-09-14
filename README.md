@@ -9,3 +9,7 @@
 ## 预览
 
 [Click Here](https://www.bilibili.com/video/BV1GJ411x7h7/?share_source=copy_web&vd_source=ded938f96ab6f358803f5b6e194589b5)
+
+...
+
+好吧其实是[这里](https://installer.sfs.izako.cc/)
