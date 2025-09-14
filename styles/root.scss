@@ -1,0 +1,15 @@
+@use "/styles/rule" as *;
+
+:root {
+    --header-height: 64px;
+    --header-padding: 32px;
+
+    @media screen and #{$mobile-rule} {
+        --header-padding: 16px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}

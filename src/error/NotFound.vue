@@ -1,0 +1,29 @@
+<script setup lang="ts">
+import { NResult, NButton } from 'naive-ui';
+import { useRouter } from 'vue-router';
+const router = useRouter()
+</script>
+<template>
+    <div class="home-content-box">
+        <n-result status="404" title="404 资源不存在" description="为什么总是求而不得呢？">
+            <template #footer>
+                <n-button @click="router.push('/')">回到主页</n-button>
+            </template>
+        </n-result>
+    </div>
+</template>
+<style scoped lang="scss">
+.home-content-box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 24px;
+}
+
+.mg8:not(:last-child) {
+    margin-bottom: 12px;
+}
+</style>

@@ -1,0 +1,64 @@
+<script setup lang="ts">
+import { NGradientText, NGrid, NGridItem, NCard, NButton } from 'naive-ui';
+import { useRouter } from 'vue-router';
+const router = useRouter();
+</script>
+<template>
+    <div class="home-content-box">
+        <NGradientText class="home-title-text" :gradient="{
+            deg: 90,
+            from: 'rgb( 60,195,183)',
+            to: 'rgb( 60,195,115)'
+        }">我也不知道我们叫什么名字</NGradientText>
+        <p class="home-subtitle-text">但反正我们可以给你提供如下的东西</p>
+        <div class="home-grid">
+            <NGrid cols="1 500:2" x-gap="12" y-gap="12">
+                <NGridItem>
+                    <NCard hoverable title="SFS 汉化包">
+                        <template #action>
+                            <NButton>飞过去看看</NButton>
+                        </template>
+                        顾名思义
+                    </NCard>
+                </NGridItem>
+                <NGridItem>
+                    <NCard hoverable title="SFS 安装器">
+                        基于「原神」开发的闭源 SFS 安装器，应该可以安装汉化包和破解补丁，如果不行的话我也没办法，毕竟我说的是「应该」
+                        <template #action>
+                            <NButton @click="router.push('/installer')">飞过去看看</NButton>
+                        </template>
+                    </NCard>
+                </NGridItem>
+            </NGrid>
+        </div>
+    </div>
+</template>
+<style scoped lang="scss">
+.home-content-box {
+    min-height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.home-title-text {
+    font-size: 24px;
+    font-weight: 600;
+    white-space: wrap;
+    text-align: center;
+}
+
+.home-subtitle-text {
+    display: inline-block;
+    margin: 4px 0;
+    text-align: center;
+}
+
+.home-grid {
+    margin-top: 48px;
+    width: min(calc(100% - 24px), 600px);
+}
+</style>
