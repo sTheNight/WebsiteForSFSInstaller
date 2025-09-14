@@ -12,4 +12,4 @@
 
 ...
 
-好吧其实是[这里](https://installer.sfs.izako.cc/)
+好吧其实是[这里](https://websiteforsfsinstaller.pages.dev)
