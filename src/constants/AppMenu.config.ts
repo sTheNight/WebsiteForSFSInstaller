@@ -1,7 +1,7 @@
 
 import type { MenuOption } from "naive-ui"
 import { renderIcon } from "@/utils/renderIcon"
-import { HomeRound, AndroidRound,TranslateRound } from "@vicons/material"
+import { HomeRound, AndroidRound, TranslateRound } from "@vicons/material"
 
 export const menuOptions: MenuOption[] = [
     { label: '主页', key: 'home', icon: renderIcon(HomeRound) },

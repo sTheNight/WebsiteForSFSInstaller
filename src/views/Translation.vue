@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import { NResult, NButton } from 'naive-ui';
 import { useRouter } from 'vue-router';
+import { onUnmounted, onMounted } from 'vue';
 const router = useRouter()
+onMounted(() => {
+    document.title = 'SFS 汉化包'
+})
+onUnmounted(() => {
+    document.title = '一个很莫名其妙的网站'
+})
 </script>
 <template>
     <div class="home-content-box">
@@ -13,6 +20,4 @@ const router = useRouter()
     box-sizing: border-box;
     padding: 24px;
 }
-
-
 </style>
