@@ -39,7 +39,8 @@ const router = useRouter();
                 </NGridItem>
             </NGrid>
             <Transition name="home-content-fade" appear>
-                <p style="text-align: center;transition-delay: 900ms;font-size: 12px;color: gray;margin-top: 24px;">这一段动画很墨迹，对吧？</p>
+                <p style="text-align: center;transition-delay: 900ms;font-size: 12px;color: gray;margin-top: 24px;">
+                    这一段动画很墨迹，对吧？</p>
             </Transition>
         </div>
     </div>

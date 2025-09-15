@@ -20,10 +20,10 @@ function downloadSelectHandler(key: string) {
             break;
     }
 }
-onMounted(()=>{
+onMounted(() => {
     document.title = 'SFS 安装器'
 })
-onUnmounted(()=>{
+onUnmounted(() => {
     document.title = '一个很莫名其妙的网站'
 })
 </script>
@@ -31,7 +31,7 @@ onUnmounted(()=>{
     <div class="home-content-box">
         <Container>
             <div class="app-info-content-box">
-                <NAvatar :size="52" src="./app_icon.png" style="border-radius: 8px;"/>
+                <NAvatar :size="52" src="./app_icon.png" style="border-radius: 8px;" />
                 <div style="height: 100%;flex: 1;margin-left: 12px;">
                     <p class="app-info-text name">SFS 安装器</p>
                     <p class="app-info-text version">1.5.10.6-9-fix8</p>
