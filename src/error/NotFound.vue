@@ -11,7 +11,7 @@ const router = useRouter();
             description="为什么总是求而不得呢？"
         >
             <template #footer>
-                <n-button @click="router.push('/')">回到主页</n-button>
+                <n-button @click="router.back()">上一页</n-button>
             </template>
         </n-result>
     </div>
