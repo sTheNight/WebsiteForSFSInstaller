@@ -1,24 +1,18 @@
 <script setup lang="ts">
 import { NLayout, NAvatar, NElement } from "naive-ui";
 import { useAppStore } from "@/store";
+import AvatarLink from "@/components/AvatarLink.vue";
 const appStore = useAppStore();
 </script>
 <template>
     <NLayout class="about-content-box">
         <p class="descriotion-text">
             本页面由&nbsp;
-            <NElement
-                tag="a"
-                class="avatar-link"
+            <AvatarLink
+                name="重铬酸钠"
                 href="https://github.com/sTheNight"
-            >
-                <NAvatar
-                    :size="18"
-                    round
-                    src="https://avatars.githubusercontent.com/u/85998341?v=4"
-                ></NAvatar
-                >重铬酸钠
-            </NElement>
+                avatar-link="https://avatars.githubusercontent.com/u/85998341?v=4"
+            ></AvatarLink>
             &nbsp;制作
         </p>
     </NLayout>

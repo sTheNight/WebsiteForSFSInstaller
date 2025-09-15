@@ -11,6 +11,7 @@ import {
     NCollapse,
     NCollapseItem,
 } from "naive-ui";
+import AvatarLink from "@/components/AvatarLink.vue";
 import { useRouter } from "vue-router";
 import Container from "@/components/Container.vue";
 import {
@@ -88,36 +89,20 @@ onUnmounted(() => {
             >
                 <div class="description-paragraph">
                     顾名思义这是一个 SFS 安装器，它可以为你安装 SFS 并同时安装由
-                    <NElement
-                        tag="a"
-                        class="avatar-link"
+                    <AvatarLink
+                        name="重铬酸钠"
                         href="https://github.com/sTheNight"
-                    >
-                        <NAvatar
-                            class="user-avatar"
-                            :size="18"
-                            round
-                            src="https://avatars.githubusercontent.com/u/85998341?v=4"
-                        />
-                        重铬酸钠
-                    </NElement>
+                        avatar-link="https://avatars.githubusercontent.com/u/85998341?v=4"
+                    ></AvatarLink>
                     维护的汉化包并附带破解补丁
                 </div>
                 <p class="description-paragraph">
                     在此感谢
-                    <NElement
-                        tag="a"
-                        class="avatar-link"
+                    <AvatarLink
+                        name="由风"
                         href="https://github.com/youfeng11"
-                    >
-                        <NAvatar
-                            class="user-avatar"
-                            :size="18"
-                            round
-                            src="https://avatars.githubusercontent.com/u/86872506?v=4"
-                        />
-                        由风
-                    </NElement>
+                        avatar-link="https://avatars.githubusercontent.com/u/86872506?v=4"
+                    ></AvatarLink>
                     提供的破解思路
                 </p>
             </NCard>
@@ -197,18 +182,6 @@ onUnmounted(() => {
 
 .app-description-card {
     margin-top: 24px;
-}
-
-.avatar-link {
-    display: inline-flex;
-    align-items: center;
-    vertical-align: middle;
-    gap: 4px;
-    color: var(--primary-color);
-    text-decoration: none;
-    padding: 0 6px 0 2px;
-    border-radius: 50px;
-    border: 1px solid var(--n-border-color);
 }
 
 .description-paragraph {

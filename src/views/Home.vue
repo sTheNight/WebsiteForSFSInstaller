@@ -34,25 +34,6 @@ const router = useRouter();
                     <Transition
                         name="home-content-fade"
                         appear
-                        style="transition-delay: 300ms"
-                    >
-                        <NCard
-                            title="SFS 汉化包"
-                            class="home-link-card"
-                        >
-                            <template #action>
-                                <NButton @click="router.push('/translation')"
-                                    >飞过去看看</NButton
-                                >
-                            </template>
-                            顾名思义
-                        </NCard>
-                    </Transition>
-                </NGridItem>
-                <NGridItem>
-                    <Transition
-                        name="home-content-fade"
-                        appear
                         style="transition-delay: 600ms"
                     >
                         <NCard
@@ -66,6 +47,25 @@ const router = useRouter();
                                     >飞过去看看</NButton
                                 >
                             </template>
+                        </NCard>
+                    </Transition>
+                </NGridItem>
+                <NGridItem>
+                    <Transition
+                        name="home-content-fade"
+                        appear
+                        style="transition-delay: 300ms"
+                    >
+                        <NCard
+                            title="SFS 汉化包"
+                            class="home-link-card"
+                        >
+                            <template #action>
+                                <NButton @click="router.push('/translation')"
+                                    >飞过去看看</NButton
+                                >
+                            </template>
+                            顾名思义
                         </NCard>
                     </Transition>
                 </NGridItem>
