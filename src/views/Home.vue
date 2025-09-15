@@ -1,7 +1,7 @@
 <script setup lang="ts">
-    import { NGradientText, NGrid, NGridItem, NCard, NButton } from "naive-ui";
-    import { useRouter } from "vue-router";
-    const router = useRouter();
+import { NGradientText, NGrid, NGridItem, NCard, NButton } from "naive-ui";
+import { useRouter } from "vue-router";
+const router = useRouter();
 </script>
 <template>
     <div class="home-content-box">
@@ -90,60 +90,60 @@
     </div>
 </template>
 <style scoped lang="scss">
-    .home-content-box {
-        min-height: 100%;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 24px;
-    }
+.home-content-box {
+    min-height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
 
-    .home-title-content-box {
-        padding: 48px 0;
-        display: flex;
-        flex-direction: column;
-    }
+.home-title-content-box {
+    padding: 48px 0;
+    display: flex;
+    flex-direction: column;
+}
 
-    .home-title-text {
-        font-size: 24px;
-        font-weight: 600;
-        white-space: wrap;
-        text-align: center;
-    }
+.home-title-text {
+    font-size: 24px;
+    font-weight: 600;
+    white-space: wrap;
+    text-align: center;
+}
 
-    .home-subtitle-text {
-        display: inline-block;
-        margin: 4px 0;
-        text-align: center;
-    }
+.home-subtitle-text {
+    display: inline-block;
+    margin: 4px 0;
+    text-align: center;
+}
 
-    .home-grid {
-        width: min(100%, 800px);
-    }
+.home-grid {
+    width: min(100%, 800px);
+}
 
-    .home-link-card {
-        height: 100%;
-    }
+.home-link-card {
+    height: 100%;
+}
 </style>
 <style lang="scss">
-    .home-content-fade-enter-active,
-    .home-content-fade-leave-active {
-        transition: all 0.3s;
-    }
+.home-content-fade-enter-active,
+.home-content-fade-leave-active {
+    transition: all 0.3s;
+}
 
-    .home-content-fade-enter-from,
-    .home-content-fade-leave-to {
-        opacity: 0;
-        transform: scale(1.2);
-        filter: blur(8px);
-    }
+.home-content-fade-enter-from,
+.home-content-fade-leave-to {
+    opacity: 0;
+    transform: scale(1.2);
+    filter: blur(8px);
+}
 
-    .home-content-fade-enter-to,
-    .home-content-fade-leave-from {
-        opacity: 1;
-        transform: scale(1);
-        filter: blur(0px);
-    }
+.home-content-fade-enter-to,
+.home-content-fade-leave-from {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+}
 </style>

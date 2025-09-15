@@ -1,46 +1,46 @@
 <script setup lang="ts">
-    import {
-        NButton,
-        NAvatar,
-        NDropdown,
-        NIcon,
-        NCard,
-        NImage,
-        NScrollbar,
-        NElement,
-        NCollapse,
-        NCollapseItem,
-    } from "naive-ui";
-    import { useRouter } from "vue-router";
-    import Container from "@/components/Container.vue";
-    import {
-        downloadDropdownOptions,
-        screenshotList,
-    } from "@/constants/InstallerView.config";
-    import { DownloadRound } from "@vicons/material";
-    import { onMounted, onUnmounted } from "vue";
-    const router = useRouter();
-    function downloadSelectHandler(key: string) {
-        switch (key) {
-            case "qq-group":
-                window.location.href = "https://qm.qq.com/q/Wxhpfck3a8";
-                break;
-            case "alist":
-                window.location.href =
-                    "https://alist.izako.cc/SpaceflightSimulator_CNlang";
-                break;
-            default:
-                // 虽然并没有创建 notfound 这个路由，不过不管了反正返回结果一样是 404
-                router.push("/notfound");
-                break;
-        }
+import {
+    NButton,
+    NAvatar,
+    NDropdown,
+    NIcon,
+    NCard,
+    NImage,
+    NScrollbar,
+    NElement,
+    NCollapse,
+    NCollapseItem,
+} from "naive-ui";
+import { useRouter } from "vue-router";
+import Container from "@/components/Container.vue";
+import {
+    downloadDropdownOptions,
+    screenshotList,
+} from "@/constants/InstallerView.config";
+import { DownloadRound } from "@vicons/material";
+import { onMounted, onUnmounted } from "vue";
+const router = useRouter();
+function downloadSelectHandler(key: string) {
+    switch (key) {
+        case "qq-group":
+            window.location.href = "https://qm.qq.com/q/Wxhpfck3a8";
+            break;
+        case "alist":
+            window.location.href =
+                "https://alist.izako.cc/SpaceflightSimulator_CNlang";
+            break;
+        default:
+            // 虽然并没有创建 notfound 这个路由，不过不管了反正返回结果一样是 404
+            router.push("/notfound");
+            break;
     }
-    onMounted(() => {
-        document.title = "SFS 安装器";
-    });
-    onUnmounted(() => {
-        document.title = "一个很莫名其妙的网站";
-    });
+}
+onMounted(() => {
+    document.title = "SFS 安装器";
+});
+onUnmounted(() => {
+    document.title = "一个很莫名其妙的网站";
+});
 </script>
 <template>
     <div class="home-content-box">
@@ -160,68 +160,68 @@
     </div>
 </template>
 <style scoped lang="scss">
-    .home-content-box {
-        box-sizing: border-box;
-        padding: 24px;
+.home-content-box {
+    box-sizing: border-box;
+    padding: 24px;
+}
+
+.app-info-content-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.app-info-text {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    white-space: nowrap;
+
+    &.version {
+        font-size: 12px;
+        color: gray;
+    }
+}
+
+.screenshot-content-box {
+    white-space: nowrap;
+
+    .screenshot-img:not(:last-child) {
+        margin-right: 8px;
     }
 
-    .app-info-content-box {
-        display: flex;
-        align-items: center;
-        margin-bottom: 36px;
+    .screenshot-img {
+        border-radius: 8px;
+    }
+}
+
+.app-description-card {
+    margin-top: 24px;
+}
+
+.avatar-link {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    gap: 4px;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0 6px 0 2px;
+    border-radius: 50px;
+    border: 1px solid var(--n-border-color);
+}
+
+.description-paragraph {
+    &:not(:last-child) {
+        margin-bottom: 8px;
     }
 
-    .app-info-text {
-        margin: 0;
-        padding: 0;
-        min-width: 0;
-        white-space: nowrap;
-
-        &.version {
-            font-size: 12px;
-            color: gray;
-        }
+    span {
+        vertical-align: baseline;
     }
+}
 
-    .screenshot-content-box {
-        white-space: nowrap;
-
-        .screenshot-img:not(:last-child) {
-            margin-right: 8px;
-        }
-
-        .screenshot-img {
-            border-radius: 8px;
-        }
-    }
-
-    .app-description-card {
-        margin-top: 24px;
-    }
-
-    .avatar-link {
-        display: inline-flex;
-        align-items: center;
-        vertical-align: middle;
-        gap: 4px;
-        color: var(--primary-color);
-        text-decoration: none;
-        padding: 0 6px 0 2px;
-        border-radius: 50px;
-        border: 1px solid var(--n-border-color);
-    }
-
-    .description-paragraph {
-        &:not(:last-child) {
-            margin-bottom: 8px;
-        }
-
-        span {
-            vertical-align: baseline;
-        }
-    }
-
-    .changelog-ol {
-        margin: 0;
-    }
+.changelog-ol {
+    margin: 0;
+}
 </style>

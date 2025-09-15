@@ -1,7 +1,7 @@
 <script setup lang="ts">
-    import { NResult, NButton } from "naive-ui";
-    import { useRouter } from "vue-router";
-    const router = useRouter();
+import { NResult, NButton } from "naive-ui";
+import { useRouter } from "vue-router";
+const router = useRouter();
 </script>
 <template>
     <div class="home-content-box">
@@ -17,17 +17,17 @@
     </div>
 </template>
 <style scoped lang="scss">
-    .home-content-box {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-        padding: 24px;
-    }
+.home-content-box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 24px;
+}
 
-    .mg8:not(:last-child) {
-        margin-bottom: 12px;
-    }
+.mg8:not(:last-child) {
+    margin-bottom: 12px;
+}
 </style>
