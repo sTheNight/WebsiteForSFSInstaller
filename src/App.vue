@@ -83,39 +83,86 @@ const themeIcon = computed(() => {
 <template>
     <NConfigProvider :theme="appStore.currentTheme">
         <div style="position: relative">
-            <NDrawer v-model:show="isDrawerShow" :default-width="300" placement="left">
+            <NDrawer
+                v-model:show="isDrawerShow"
+                :default-width="300"
+                placement="left"
+            >
                 <NDrawerContent title="菜单">
-                    <NMenu :options="menuOptions" v-model:value="activeKey" />
+                    <NMenu
+                        :options="menuOptions"
+                        v-model:value="activeKey"
+                    />
                 </NDrawerContent>
             </NDrawer>
-            <NLayout class="root-box" embedded position="absolute">
-                <NLayoutHeader class="header" bordered>
-                    <NFlex class="header-flex" justify="space-between">
-                        <div class="logo" style="font-size: 18px">
-                            <NButton v-if="appStore.isMobile" quaternary @click="isDrawerShow = true" circle
-                                style="margin-right: 8px">
+            <NLayout
+                class="root-box"
+                embedded
+                position="absolute"
+            >
+                <NLayoutHeader
+                    class="header"
+                    bordered
+                >
+                    <NFlex
+                        class="header-flex"
+                        justify="space-between"
+                    >
+                        <div
+                            class="logo"
+                            style="font-size: 18px"
+                        >
+                            <NButton
+                                v-if="appStore.isMobile"
+                                quaternary
+                                @click="isDrawerShow = true"
+                                circle
+                                style="margin-right: 8px"
+                            >
                                 <template #icon>
                                     <NIcon>
                                         <MenuRound />
                                     </NIcon>
                                 </template>
                             </NButton>
-                            <NEllipsis class="title">一个很莫名其妙的网站</NEllipsis>
+                            <NEllipsis class="title"
+                                >一个很莫名其妙的网站</NEllipsis
+                            >
                         </div>
                         <div class="action-box">
-                            <NDropdown trigger="hover" :show-arrow="true" :options="toggleThemeOpsiont"
-                                @select="toggleThemeHandleSelect">
-                                <NButton quaternary circle>
+                            <NDropdown
+                                trigger="hover"
+                                :show-arrow="true"
+                                :options="toggleThemeOpsiont"
+                                @select="toggleThemeHandleSelect"
+                            >
+                                <NButton
+                                    quaternary
+                                    circle
+                                >
                                     <template #icon>
-                                        <Transition name="fade" mode="out-in">
-                                            <NIcon :component="themeIcon" :key="appStore.themeMode" />
+                                        <Transition
+                                            name="fade"
+                                            mode="out-in"
+                                        >
+                                            <NIcon
+                                                :component="themeIcon"
+                                                :key="appStore.themeMode"
+                                            />
                                         </Transition>
                                     </template>
                                 </NButton>
                             </NDropdown>
-                            <NDropdown trigger="hover" :show-arrow="true" :options="moreDropdownOptions"
-                                @select="moreDropdownHandleSelect">
-                                <NButton quaternary circle>
+                            <NDropdown
+                                trigger="hover"
+                                :show-arrow="true"
+                                :options="moreDropdownOptions"
+                                @select="moreDropdownHandleSelect"
+                            >
+                                <NButton
+                                    quaternary
+                                    circle
+                                >
                                     <template #icon>
                                         <NIcon>
                                             <MoreVertRound />
@@ -127,17 +174,36 @@ const themeIcon = computed(() => {
                     </NFlex>
                 </NLayoutHeader>
 
-                <NLayout class="content-box" has-sider position="absolute"
-                    style="top: 64px; left: 0; right: 0; bottom: 0">
-                    <NLayoutSider class="sider-bar" bordered show-trigger="arrow-circle" position="static"
-                        collapse-mode="width" :collapsed-width="64" v-model:collapsed="collapse"
-                        v-if="!appStore.isMobile">
-                        <NMenu :options="menuOptions" v-model:value="activeKey" :collapsed="collapse"
-                            :collapsed-width="64" :collapsed-icon-size="20" />
+                <NLayout
+                    class="content-box"
+                    has-sider
+                    position="absolute"
+                    style="top: 64px; left: 0; right: 0; bottom: 0"
+                >
+                    <NLayoutSider
+                        class="sider-bar"
+                        bordered
+                        show-trigger="arrow-circle"
+                        position="static"
+                        collapse-mode="width"
+                        :collapsed-width="64"
+                        v-model:collapsed="collapse"
+                        v-if="!appStore.isMobile"
+                    >
+                        <NMenu
+                            :options="menuOptions"
+                            v-model:value="activeKey"
+                            :collapsed="collapse"
+                            :collapsed-width="64"
+                            :collapsed-icon-size="20"
+                        />
                     </NLayoutSider>
                     <NLayoutContent>
                         <RouterView v-slot="{ Component }">
-                            <Transition name="fade" mode="out-in">
+                            <Transition
+                                name="fade"
+                                mode="out-in"
+                            >
                                 <component :is="Component" />
                             </Transition>
                         </RouterView>
