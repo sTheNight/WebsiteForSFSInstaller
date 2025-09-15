@@ -7,7 +7,6 @@ import {
     NCard,
     NImage,
     NScrollbar,
-    NElement,
     NCollapse,
     NCollapseItem,
 } from "naive-ui";
@@ -21,21 +20,21 @@ import {
 import { DownloadRound } from "@vicons/material";
 import { onMounted, onUnmounted } from "vue";
 const router = useRouter();
+
+const downloadLinks: Record<string, string> = {
+    "qq-group": "https://qm.qq.com/q/Wxhpfck3a8",
+    alist: "https://alist.izako.cc/SpaceflightSimulator_CNlang",
+};
+
 function downloadSelectHandler(key: string) {
-    switch (key) {
-        case "qq-group":
-            window.location.href = "https://qm.qq.com/q/Wxhpfck3a8";
-            break;
-        case "alist":
-            window.location.href =
-                "https://alist.izako.cc/SpaceflightSimulator_CNlang";
-            break;
-        default:
-            // 虽然并没有创建 notfound 这个路由，不过不管了反正返回结果一样是 404
-            router.push("/notfound");
-            break;
+    const url = downloadLinks[key];
+    if (url) {
+        window.open(url, "_blank");
+    } else {
+        router.push("/404");
     }
 }
+
 onMounted(() => {
     document.title = "SFS 安装器";
 });
