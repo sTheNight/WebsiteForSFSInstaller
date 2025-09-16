@@ -34,7 +34,7 @@ const router = useRouter();
                     <Transition
                         name="home-content-fade"
                         appear
-                        style="transition-delay: 600ms"
+                        style="transition-delay: 300ms"
                     >
                         <NCard
                             title="SFS 安装器"
@@ -54,7 +54,7 @@ const router = useRouter();
                     <Transition
                         name="home-content-fade"
                         appear
-                        style="transition-delay: 300ms"
+                        style="transition-delay: 600ms"
                     >
                         <NCard
                             title="SFS 汉化包"
