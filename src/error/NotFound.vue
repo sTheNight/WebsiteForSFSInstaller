@@ -1,19 +1,22 @@
 <script setup lang="ts">
-import { NResult, NButton } from "naive-ui";
+import { NResult, NButton, NFlex } from "naive-ui";
 import { useRouter } from "vue-router";
 const router = useRouter();
 </script>
 <template>
     <div class="home-content-box">
-        <n-result
+        <NResult
             status="404"
             title="404 资源不存在"
             description="为什么总是求而不得呢？"
         >
             <template #footer>
-                <n-button @click="router.back()">上一页</n-button>
+                <NFlex justify="center">
+                    <NButton @click="router.back()">上一页</NButton>
+                    <NButton @click="router.push('/')">回到主页</NButton>
+                </NFlex>
             </template>
-        </n-result>
+        </NResult>
     </div>
 </template>
 <style scoped lang="scss">

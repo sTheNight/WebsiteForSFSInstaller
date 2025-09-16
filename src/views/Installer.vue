@@ -13,10 +13,7 @@ import {
 import AvatarLink from "@/components/AvatarLink.vue";
 import { useRouter } from "vue-router";
 import Container from "@/components/Container.vue";
-import {
-    downloadDropdownOptions,
-    screenshotList,
-} from "@/constants/InstallerView.config";
+import { downloadDropdownOptions, screenshotList } from "@/constants/InstallerView.config";
 import { DownloadRound } from "@vicons/material";
 import { onMounted, onUnmounted } from "vue";
 const router = useRouter();

@@ -8,7 +8,7 @@ const props = withDefaults(
     }>(),
     {
         leftPadding: 2,
-    },
+    }
 );
 import { NElement, NAvatar } from "naive-ui";
 </script>

@@ -19,9 +19,7 @@ const router = useRouter();
                     }"
                     >我也不知道我们叫什么名字</NGradientText
                 >
-                <p class="home-subtitle-text">
-                    但总之我们可以给你提供如下的东西
-                </p>
+                <p class="home-subtitle-text">但总之我们可以给你提供如下的东西</p>
             </div>
         </Transition>
         <div class="home-grid">
@@ -43,9 +41,7 @@ const router = useRouter();
                             基于「原神」开发的闭源 SFS
                             安装器，应该可以安装汉化包和破解补丁，如果不行的话我也没办法，毕竟我说的是「应该」
                             <template #action>
-                                <NButton @click="router.push('/installer')"
-                                    >飞过去看看</NButton
-                                >
+                                <NButton @click="router.push('/installer')">飞过去看看</NButton>
                             </template>
                         </NCard>
                     </Transition>
@@ -61,9 +57,7 @@ const router = useRouter();
                             class="home-link-card"
                         >
                             <template #action>
-                                <NButton @click="router.push('/translation')"
-                                    >飞过去看看</NButton
-                                >
+                                <NButton @click="router.push('/translation')">飞过去看看</NButton>
                             </template>
                             顾名思义
                         </NCard>

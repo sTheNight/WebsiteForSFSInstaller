@@ -26,11 +26,7 @@ import { createDiscreteApi } from "naive-ui";
 import { ref, computed, h } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useAppStore } from "./store";
-import {
-    menuOptions,
-    toggleThemeOpsiont,
-    moreDropdownOptions,
-} from "./constants/AppMenu.config";
+import { menuOptions, toggleThemeOpsiont, moreDropdownOptions } from "./constants/AppMenu.config";
 import AboutDialog from "./views/AboutDialog.vue";
 
 const appStore = useAppStore();
